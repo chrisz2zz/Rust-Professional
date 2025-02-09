@@ -134,6 +134,7 @@ impl<T> Display for Node<T>
 where
     T: Display,
 {
+    // 1
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
         match self.next {
             Some(node) => write!(f, "{}, {}", self.val, unsafe { node.as_ref() }),
